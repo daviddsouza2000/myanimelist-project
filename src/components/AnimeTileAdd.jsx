@@ -18,7 +18,8 @@ export default function AnimeTileAdd(props) {
         image,
         score,
         watch_status,
-        isDisabled
+        isDisabled,
+        currentUid
      } = props;
 
     const [openDialog, setOpenDialog] = useState(false);
@@ -83,7 +84,8 @@ export default function AnimeTileAdd(props) {
             title={title}
             image={image}
             score={score}
-            watch_status={watch_status}></AnimeListAddDialogBox>
+            watch_status={watch_status}
+            currentUid={currentUid}></AnimeListAddDialogBox>
         </>
     )
 }

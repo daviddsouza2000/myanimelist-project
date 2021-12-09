@@ -7,6 +7,8 @@ import { v4 as uuidv4 } from "uuid";
 
 import AnimeTileAdd from './AnimeTileAdd';
 
+import { useAuth } from '../contexts/AuthContext';
+
 const style = {
     marginTop: 0,
     display: 'flex',
@@ -19,6 +21,8 @@ export default function AnimeListAddGrid({stuff, username}) {
     const [loading, setLoading] = useState(false);
 
     const [animeGrid, setAnimeGrid] = useState([]);
+
+    const { currentUser } = useAuth();
 
     useEffect(() => {
         const res = filterData(results);
@@ -148,6 +152,7 @@ export default function AnimeListAddGrid({stuff, username}) {
                             score={score}
                             watch_status={watch_status}
                             isDisabled={isDisabled}
+                            currentUid={currentUser.uid}
                             ></AnimeTileAdd>
                     );
                 })}

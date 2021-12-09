@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
+import { useAuth } from '../contexts/AuthContext';
 
 import AnimeListDialogBox from '../components/AnimeListDialogBox';
 import AnimeListAddGrid from '../components/AnimeListAddGrid';
@@ -31,6 +32,8 @@ export default function AnimeList() {
   const [value, setValue] = React.useState(0);
 
   let { username } = useParams();
+
+  const { currentUser } = useAuth();
 
   const ref = firestore.collection("animelists");
 
@@ -100,7 +103,7 @@ export default function AnimeList() {
       type: 'actions',
       flex: 0.1,
       renderCell: (params) => (
-        <AnimeListDialogBox {...params.row}></AnimeListDialogBox>
+        <AnimeListDialogBox {...params.row} currentUid={currentUser.uid}></AnimeListDialogBox>
       )
     }
   ];

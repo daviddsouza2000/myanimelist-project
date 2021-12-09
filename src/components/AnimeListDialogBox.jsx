@@ -58,7 +58,7 @@ const score_options = [
     },
 ]
 
-export default function AnimeListDialogBox({ docID, username, id, anime_id, episodes_watched, episode_count, image, score, title, watch_status }) {
+export default function AnimeListDialogBox({ docID, username, id, anime_id, episodes_watched, episode_count, image, score, title, watch_status, currentUid }) {
     const [open, setOpen] = useState(false);
 
     const [watchStatus, setWatchStatus] = useState(watch_status);
@@ -124,7 +124,8 @@ export default function AnimeListDialogBox({ docID, username, id, anime_id, epis
             score: scoreState,
             title,
             watch_status: watchStatus,
-            username
+            username,
+            uid: currentUid
         };
         ref.doc(docID).update(updatedEntry).catch((err) => {console.log(err)});
     };
