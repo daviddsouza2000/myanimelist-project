@@ -27,7 +27,7 @@ function App() {
         <Container maxWidth="lg">
           <Router>
             <AuthProvider>
-              <NavigationBar title="MyAnimeList"></NavigationBar>
+              <NavigationBar title="AnimeList"></NavigationBar>
               <Switch>
                 <Route exact path="/anime">
                   <AnimePage></AnimePage>

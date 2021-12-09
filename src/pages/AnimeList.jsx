@@ -10,6 +10,7 @@ import Tab from '@mui/material/Tab';
 
 import AnimeListDialogBox from '../components/AnimeListDialogBox';
 import AnimeListAddGrid from '../components/AnimeListAddGrid';
+import CopyToClipBoard from '../components/CopyToClipboard';
 
 const animelist_rows = [
   {
@@ -114,6 +115,7 @@ export default function AnimeList() {
       <Tabs value={value} onChange={handleChange} centered>
         <Tab label="View Anime List" />
         <Tab label="Add to Anime List" />
+        <Tab label="Share Your Anime List" />
       </Tabs>
     </Box>
     {value===0 ?
@@ -125,6 +127,7 @@ export default function AnimeList() {
         rows={stuff} columns={animelist_columns} />
     : null}
     {value===1 ? <AnimeListAddGrid stuff={stuff} username={username}></AnimeListAddGrid> : null}
+    {value===2 ? <CopyToClipBoard></CopyToClipBoard> : null}
     </>
   )
 }
