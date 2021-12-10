@@ -48,8 +48,8 @@ export default function SignUp() {
             } else {
                 setError("Username already exists");
             }
-        } catch {
-            setError("Failed to create account (email already in use)");
+        } catch (err){
+            setError("Failed to create account");
         }
         setLoading(false);
     };

@@ -27,7 +27,7 @@ const animelist_rows = [
 ]
 
 export default function AnimeList() {
-  const [stuff, setStuff] = useState(animelist_rows);
+  const [stuff, setStuff] = useState([]);
 
   const [value, setValue] = React.useState(0);
 

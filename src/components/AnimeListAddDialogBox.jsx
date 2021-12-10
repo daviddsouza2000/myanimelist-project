@@ -124,7 +124,7 @@ export default function AnimeListDialogBox({ openDialog, docID, username, id, an
             username,
             uid: currentUid
         };
-        ref.doc(docID).set(updatedEntry).catch((err) => {console.log(err)});
+        ref.doc(docID).set(updatedEntry).catch((err) => {/*console.log(err)*/});
     };
 
     return (
