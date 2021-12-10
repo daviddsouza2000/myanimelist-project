@@ -75,6 +75,7 @@ export default function AnimeListPublic() {
   return (
     <div style={{ height: 300, width: '100%' }}>
       <DataGrid
+        autoHeight={true}
         disableColumnMenu={true}
         rowHeight={75}
         disableSelectionOnClick={true}
