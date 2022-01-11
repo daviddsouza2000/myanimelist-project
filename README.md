@@ -14,15 +14,15 @@ I used the [Kitsu API](https://kitsu.docs.apiary.io/#) for TV show data.
 
 A user can submit a query for a show:
 
-![Anime Page](/pics/animepage.png)
+![Anime Page](/screenshots/animepage.PNG)
 
 There is a page showing detailed information about each show:
 
-![Single Anime Page](/pics/singleanimepage.png)
+![Single Anime Page](/screenshots/singleanimepage.PNG)
 
 A user can create an account to create a personal list of shows they can give scores for:
 
-![Anime List](/pics/animelist.png)
+![Anime List](/screenshots/animelist.PNG)
 
 Each user has a unique link to share so other users can view their list.
 
