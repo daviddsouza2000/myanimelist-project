@@ -1,3 +1,32 @@
+# Anime Lister Project
+
+This is a web application I developed anonymously browse data pertaining to animated TV shows fetched from the Kitsu RESTful API.
+
+Deployment link: https://myanimelist-project.web.app
+
+I used [React.js](https://reactjs.org/) for the frontend.
+
+I used the [MUI library](https://mui.com/) for styled React components.
+
+I used [Firebase](https://firebase.google.com/) Backend as a Service (BaaS). I used the Firebase Firestore NoSQL database to store user data, Firebase Authentication to manage user accounts, and Firebase Hosting to host the web application.
+
+I used the [Kitsu API](https://kitsu.docs.apiary.io/#) for TV show data.
+
+A user can submit a query for a show:
+
+![Anime Page](public/pics/animepage.png)
+
+There is a page showing detailed information about each show:
+
+![Single Anime Page](public/pics/singleanimepage.png)
+
+A user can create an account to create a personal list of shows they can give scores for:
+
+![Anime List](public/pics/animelist.png)
+
+Each user has a unique link to share so other users can view their list.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
